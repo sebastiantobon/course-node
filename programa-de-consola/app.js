@@ -1,5 +1,11 @@
 const { leerDb, saveDb } = require("./db/SaveDb");
-const { inquirerMenu, stop, leerInput } = require("./inquierer");
+const {
+  inquirerMenu,
+  stop,
+  leerInput,
+  listTasksDelete,
+  confirmDelete,
+} = require("./inquierer");
 const Tasks = require("./models/tasks");
 
 require("colors");
@@ -27,6 +33,7 @@ const main = async () => {
         // Crear Opcion
         const desc = await leerInput("Description: ");
         tareas.createTask(desc);
+        console.log("Task created successfully");
         break;
 
       case "2":
@@ -35,17 +42,26 @@ const main = async () => {
         tareas.listadoCompleto();
         break;
 
-      case "3":
+      case "3": //  Listar tareas completadas
         tareas.listarPendientes(true);
         break;
-      case "4":
+      case "4": // Listar Tareas pendientes
         tareas.listarPendientes(false);
+        break;
+      case "6": // Listar Tareas para borrar
+        const id = await listTasksDelete(tareas.listadoArr);
+        if (id !== "0") {
+          const ok = await confirmDelete("Estas seguro ");
+          if (ok) {
+            tareas.deleteTask(id);
+            console.log("Task Delete successfully");
+          }
+        }
         break;
     }
 
-    await stop();
-
     saveDb(tareas.listadoArr);
+    await stop();
   } while (opt !== "0");
 };
 

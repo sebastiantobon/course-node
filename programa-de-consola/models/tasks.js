@@ -10,7 +10,7 @@ class Tasks {
     // esto me va a regresar un un arreglo de todas las llaves
 
     // tambien tenemos metodos como el forEach, para indentificar cuales son las tareas que tengo en este _listado[]
-
+    // y lo que hacemos con .push en agregar una nueva tarea al array listado 
     Object.keys(this._listado).forEach((key) => {
       const tarea = this._listado[key];
       listado.push(tarea);
