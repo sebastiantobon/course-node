@@ -1,14 +1,20 @@
-<h1 align="center">Node and JavaScript Reinforcement course</h1>
+`<h1 align="center">Node and JavaScript Reinforcement course</h1>
+
+<p align="center" style=`color: red`>
+<b>
+Creating console application with node
+</b>
+</p>
 
 <p align="center" style="color: red;">
-After downloading the repository, we go to the console program folder and do
+After downloading the repository, we go to the console program folder and open the terminal.
 <br/>
 <b>npm i</b>
+<br/>
+For the installation of node_modules: which contains the libraries to create the console App
 </p>
 
 <h3 align="center">information</h3>
-
-
 
 <p align="center" style="color: red;">
  This course is about node and reinforcement and / or explanation of modern javascript.
@@ -36,4 +42,4 @@ This repository contains information about
 
 <p align="center">
   <img src="./list.gif">
-</p>
+</p>`
