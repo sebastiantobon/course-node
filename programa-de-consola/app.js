@@ -20,7 +20,7 @@ const main = async () => {
 
   do {
     opt = await inquirerMenu();
-    console.log({ opt });
+    // console.log({ opt });
 
     switch (opt) {
       case "1":
@@ -31,8 +31,16 @@ const main = async () => {
 
       case "2":
         //
-        console.log(tareas.listadoArr);
+        // console.log(tareas.listadoArr);
+        tareas.listadoCompleto();
         break;
+
+      case "3":
+        tareas.listarPendientes(true);
+        break;
+        case "4":
+          tareas.listarPendientes(false);
+          break;
     }
 
     await stop();
