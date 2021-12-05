@@ -1,13 +1,23 @@
 <h1 align="center">Node and JavaScript Reinforcement course</h1>
 
 <p align="center" style="color: red;">
- This course is about node and reinforcement and / or explanation of modern javascript,
+After downloading the repository, we go to the console program folder and do
+<br/>
+<b>npm i</b>
+</p>
+
+<h3 align="center">information</h3>
+
+
+
+<p align="center" style="color: red;">
+ This course is about node and reinforcement and / or explanation of modern javascript.
  <br/>
  we can go buy and see it here in this link
+ <br/>
   <a target="_blank" href="https://www.udemy.com/course/node-de-cero-a-experto">Ir al curso</a>
 
 </p>
-
 
 <p align="left" color="red">
 This repository contains information about
@@ -21,8 +31,6 @@ This repository contains information about
   <li>Funtion Flecha</li>
   <li>Promise</li>
   <li>Template string</li>
-
-
 
   </ul>
 
