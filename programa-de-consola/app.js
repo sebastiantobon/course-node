@@ -38,9 +38,9 @@ const main = async () => {
       case "3":
         tareas.listarPendientes(true);
         break;
-        case "4":
-          tareas.listarPendientes(false);
-          break;
+      case "4":
+        tareas.listarPendientes(false);
+        break;
     }
 
     await stop();

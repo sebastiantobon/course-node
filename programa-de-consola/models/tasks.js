@@ -23,6 +23,12 @@ class Tasks {
     this._listado = {};
   }
 
+  deleteTask(id = ""){
+    if(this._listado[id]){
+        delete this._listado[id]
+    }
+  }
+
   // Esta funcion es para cargar la info que se guarda en el archivo .json
   // cuando se le pasa la data desde el app.js y utilizamos el forEach para barrer e identificar todos los objetos
   // que se encuantrar en ._listado con el id
