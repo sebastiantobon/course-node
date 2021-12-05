@@ -9,46 +9,50 @@ const menuOpts = [
     message: "Que deseas hacer?",
     choices: [
       {
-        value: "1",
-        name: `${"1".green}. Create task`,
+        value: '1',
+        name: `${'1'.green}. Create task`,
       },
       {
-        value: "2",
-        name: `${"2".green}. List tasks`,
+        value: '2',
+        name: `${'2'.green}. List tasks`,
       },
       {
-        value: "3",
-        name: `${"3".green}. List completed tasks`,
+        value: '3',
+        name: `${'3'.green}. List completed tasks`,
       },
       {
-        value: "4",
-        name: `${"4".green}. List pending tasks`,
+        value: '4',
+        name: `${'4'.green}. List pending tasks`,
       },
       {
-        value: "5",
-        name: `${"5".green}. Complete homework`,
+        value: '5',
+        name: `${'5'.green}. Complete homework`,
       },
       {
-        value: "0",
-        name: `${"0".green}. GET OUT\n`,
+        value: '6',
+        name: `${'6'.green}. Delete Task`,
+      },
+      {
+        value: '0',
+        name: `${'0'.green}. GET OUT`,
       },
     ],
   },
 ];
 
-const inquirerMenu = async () => {
+const inquirerMenu = async() => {
   console.clear();
 
   console.log("=======================".green);
-  console.log("   Select an option   ".green);
+  console.log("   Select an option   ".bgBlue.america);
   console.log("=======================\n".green);
 
-  const  option = await inquirer.prompt(menuOpts);
+  const  { opcion } = await inquirer.prompt(menuOpts);
 
-  return option;
+  return opcion;
 };
 
-const stop = async () => {
+const stop = async() => {
   const questions = [
     {
       type: "input",
@@ -56,11 +60,11 @@ const stop = async () => {
       message: `Select an option ${"ENTER".green} to continue\n`,
     },
   ];
-
+  console.log("\n");
   await inquirer.prompt(questions);
 };
 
-const leerInput = async (message) => {
+const leerInput = async(message) => {
   const question = [
     {
       type: "input",

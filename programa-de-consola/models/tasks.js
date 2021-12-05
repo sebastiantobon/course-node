@@ -8,9 +8,8 @@ class Tasks {
   }
 
   createTask(desc = "") {
-    const task = new Tasks(desc);
-
-    this._listado[Task.id] = task;
+    const task = new Task(desc);
+    this._listado[task.id] = task;
   }
 }
 
