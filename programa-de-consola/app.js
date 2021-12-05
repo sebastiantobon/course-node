@@ -5,6 +5,7 @@ const {
   leerInput,
   listTasksDelete,
   confirmDelete,
+  showListCheck,
 } = require("./inquierer");
 const Tasks = require("./models/tasks");
 
@@ -47,6 +48,10 @@ const main = async () => {
         break;
       case "4": // Listar Tareas pendientes
         tareas.listarPendientes(false);
+        break;
+        case "5": // Listar Tareas pendientes
+        const ids = await showListCheck(tareas.listadoArr);
+        tareas.toogleCompleted(ids);
         break;
       case "6": // Listar Tareas para borrar
         const id = await listTasksDelete(tareas.listadoArr);

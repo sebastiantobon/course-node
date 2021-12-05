@@ -25,7 +25,7 @@ const menuOpts = [
       },
       {
         value: "5",
-        name: `${"5".green}. Complete homework`,
+        name: `${"5".green}. Complete task(s)`,
       },
       {
         value: "6",
@@ -51,7 +51,7 @@ const inquirerMenu = async () => {
   return opcion;
 };
 
-const stop = async() => {
+const stop = async () => {
   const questions = [
     {
       type: "input",
@@ -95,7 +95,7 @@ const listTasksDelete = async (tareas = []) => {
   choices.unshift({
     value: "0",
     name: "0.".green + "Cancelar",
-  })
+  });
 
   const questions = [
     {
@@ -110,18 +110,48 @@ const listTasksDelete = async (tareas = []) => {
   return id;
 };
 
-
-const confirmDelete = async(message) => {
+const confirmDelete = async (message) => {
   const question = [
     {
       type: "confirm",
       name: "ok",
-      message
-    }
-  ]
+      message,
+    },
+  ];
 
   const { ok } = await inquirer.prompt(question);
- return ok;
-}; 
+  return ok;
+};
 
-module.exports = { inquirerMenu, stop, leerInput, listTasksDelete, confirmDelete };
+const showListCheck = async (tareas = []) => {
+  const choices = tareas.map((tarea, i) => {
+    const idx = `${i + 1}`.green;
+
+    return {
+      value: tarea.id,
+      name: `${idx} ${tarea.desc}`,
+      checked: (tarea.completadoEn) ? true : false
+    };
+  });
+
+  const questions = [
+    {
+      type: "checkbox",
+      name: "ids",
+      message: "selections",
+      choices,
+    },
+  ];
+
+  const { ids } = await inquirer.prompt(questions);
+  return ids;
+};
+
+module.exports = {
+  inquirerMenu,
+  stop,
+  leerInput,
+  listTasksDelete,
+  confirmDelete,
+  showListCheck,
+};

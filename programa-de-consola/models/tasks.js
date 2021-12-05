@@ -10,7 +10,7 @@ class Tasks {
     // esto me va a regresar un un arreglo de todas las llaves
 
     // tambien tenemos metodos como el forEach, para indentificar cuales son las tareas que tengo en este _listado[]
-    // y lo que hacemos con .push en agregar una nueva tarea al array listado 
+    // y lo que hacemos con .push en agregar una nueva tarea al array listado
     Object.keys(this._listado).forEach((key) => {
       const tarea = this._listado[key];
       listado.push(tarea);
@@ -23,9 +23,9 @@ class Tasks {
     this._listado = {};
   }
 
-  deleteTask(id = ""){
-    if(this._listado[id]){
-        delete this._listado[id]
+  deleteTask(id = "") {
+    if (this._listado[id]) {
+      delete this._listado[id];
     }
   }
 
@@ -49,7 +49,7 @@ class Tasks {
       const idx = `${index + 1}`.green;
       const { desc, completadoEn } = tarea;
 
-      const estado = completadoEn ? "Completado".green : "Pendiente".red;
+      const estado = completadoEn ? completadoEn.green : "Pendiente".red;
 
       console.log(`${idx} ${desc} :: ${estado}`);
     });
@@ -70,9 +70,25 @@ class Tasks {
         }
       } else {
         if (!completadoEn) {
-          contador += 1; 
+          contador += 1;
           console.log(`${(contador + ".").green} ${desc} :: ${estado}`);
         }
+      }
+    });
+  }
+
+  toogleCompleted(ids = []) {
+    ids.forEach((id) => {
+      const tarea = this._listado[id];
+      if (!tarea.completadoEn) {
+        tarea.completadoEn = new Date().toISOString();
+      }
+    });
+
+    this.listadoArr.forEach((tarea) => {
+      if (!ids.includes(tarea.id)) {
+        const tareaS = this._listado[tarea.id];
+        tareaS.completadoEn = null;
       }
     });
   }
