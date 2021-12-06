@@ -54,7 +54,6 @@ This repository contains information about JS
 </p>
 
   <ul>
-  <li></li>
   <li>CallBack-hell</li>
   <li>Callbacks</li>
   <li>Const, var and let</li>
