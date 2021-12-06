@@ -1,6 +1,6 @@
-`<h1 align="center">Node and JavaScript Reinforcement course</h1>
+<h1 align="center">Node and JavaScript Reinforcement course</h1>
 
-<p align="center" style=`color: red`>
+<p align="center" >
 <b>
 Creating console application with node
 </b>
@@ -12,6 +12,12 @@ After downloading the repository, we go to the console program folder and open t
 <b>npm i</b>
 <br/>
 For the installation of node_modules: which contains the libraries to create the console App
+<br/>
+to run the console app, use the 
+<br/>
+<b>command node app.js</b>
+
+
 </p>
 
 <h3 align="center">information</h3>
@@ -41,5 +47,5 @@ This repository contains information about
   </ul>
 
 <p align="center">
-  <img src="./list.gif">
-</p>`
+  <img src="./appConsole.gif">
+</p>
