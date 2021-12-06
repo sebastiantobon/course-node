@@ -19,10 +19,9 @@ After downloading the repository, we go to the console program folder and open t
 <br/>
 For the installation of node_modules: which contains the libraries to create the console App
 <br/>
-to run the console app, use the 
+to run the console app, use the command
 <br/>
-<br/>
-<b>command node app.js</b>
+<b> node app.js</b>
 
 </p>
 
