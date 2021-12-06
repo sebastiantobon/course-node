@@ -9,7 +9,11 @@ Creating console application with node
 <p align="center" style="color: red;">
 After downloading the repository, we go to the console program folder and open the terminal.
 <br/>
-<b>npm i</b>
+
+  <ul>
+  <li><b>npm i node</b></li>
+  <li><b>npm i</b></li>
+  </ul>
 <br/>
 For the installation of node_modules: which contains the libraries to create the console App
 <br/>
