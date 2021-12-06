@@ -14,7 +14,6 @@ After downloading the repository, we go to the console program folder and open t
   <li><b><a target="_blank" href="https://www.npmjs.com/package/node">npm i node</a></b></li>
   <li><b>npm i</b></li>
 
-
   </ul>
 <br/>
 For the installation of node_modules: which contains the libraries to create the console App
@@ -37,11 +36,26 @@ to run the console app, use the command
 </p>
 
 <p align="left" color="red">
-This repository contains information about
+This repository contains information about Node.js
 </p>
 
   <ul>
-  <li>Async-await</li>
+  nodemon
+    <li><b><a target="_blank" href="https://www.npmjs.com/package/inquirerP">Inquirer.js</a></b></li>
+    <li><b><a target="_blank" href="https://www.npmjs.com/package/fs">Security holding package</a></b></li>
+     <li><b><a target="_blank" href="https://www.npmjs.com/package/colors">colors.js
+</a></b></li>
+    <li><b><a target="_blank" href="https://www.npmjs.com/package/nodemon">nodemon</a></b></li>
+    <li><b><a target="_blank" href="https://www.npmjs.com/package/uuid">uuid</a></b></li>
+
+  </ul>
+
+<p align="left" color="red">
+This repository contains information about JS
+</p>
+
+  <ul>
+  <li></li>
   <li>CallBack-hell</li>
   <li>Callbacks</li>
   <li>Const, var and let</li>
