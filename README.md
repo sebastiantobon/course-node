@@ -40,7 +40,6 @@ This repository contains information about Node.js
 </p>
 
   <ul>
-  nodemon
     <li><b><a target="_blank" href="https://www.npmjs.com/package/inquirerP">Inquirer.js</a></b></li>
     <li><b><a target="_blank" href="https://www.npmjs.com/package/fs">Security holding package</a></b></li>
      <li><b><a target="_blank" href="https://www.npmjs.com/package/colors">colors.js
