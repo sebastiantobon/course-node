@@ -11,8 +11,10 @@ After downloading the repository, we go to the console program folder and open t
 <br/>
 
   <ul>
-  <li><b>npm i node</b></li>
+  <li><b><a target="_blank" href="https://www.npmjs.com/package/node">npm i node</a></b></li>
   <li><b>npm i</b></li>
+
+
   </ul>
 <br/>
 For the installation of node_modules: which contains the libraries to create the console App
@@ -20,7 +22,6 @@ For the installation of node_modules: which contains the libraries to create the
 to run the console app, use the 
 <br/>
 <b>command node app.js</b>
-
 
 </p>
 
